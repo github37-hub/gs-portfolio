@@ -1,0 +1,309 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+
+}
+body{
+   
+   
+   background: linear-gradient(137deg,violet,rgb(33, 228, 212));
+   z-index: -1;
+}
+html{
+  scroll-behavior: smooth;
+  
+}
+
+
+
+
+  .dark-mode {
+    background-color: black;
+    color: whitesmoke;
+  }
+
+.header{
+   width: 100%;
+   min-height: 100vh;
+   padding: 0px 8%;
+   overflow: hidden;
+   
+}
+
+
+.sidebar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  height: 100vh;
+  width: 120px;
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  
+
+
+}
+.sidebar li{
+  width: 100%;
+}
+.sidebar a{
+  width: 100%;
+}
+.menu-btn{
+  display: none;
+}
+@media(max-width: 800px) {
+  .hideonmobile{
+    display: none;
+  }
+  .menu-btn{
+    display: block;
+  }
+ 
+}
+@media(max-width: 400px) {
+    .sidebar{
+      width: 250px;
+    }
+    
+   
+}
+nav{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    padding: 10px 0px;
+    background: #fff rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    width: 90%;
+    height: 6rem;
+   
+}
+
+
+nav ul{
+    width: 100%;
+    text-align: right;
+    list-style: none;
+    margin-right: 50px;
+}
+nav ul li{
+    display: inline-block;
+    margin: 5px 5px;
+}
+nav ul li a{
+    text-decoration: none;
+    font-weight: 500;
+
+}
+nav ul li a:hover{
+  color: cyan;
+}
+
+.content{
+    margin-top: 20%;
+    max-width: 600px;
+    
+}
+.content h1{
+    font-size: 2.5rem;
+    font-family: serif;
+    font-weight: 600;
+}
+.content a{
+    background: #4864ff;
+    color: #fff;
+    padding: 15px 70px;
+    display: inline-block;
+    margin-top: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.content span{
+  color: cyan;
+}
+aside{
+  width: 80%;
+  font-style: italic; 
+}
+aside:hover{
+  color:whitesmoke
+}
+
+
+ 
+  
+
+.image-box img{
+    position: absolute;
+    right: 10%;
+    bottom: 50%;
+    animation: scale 1s linear infinite alternate-reverse;
+}
+.header img{
+  width: 160px;
+  height: 160px;
+  
+}
+
+@keyframes scale {
+    100%{transform: scale(0.5,0.5);}
+    
+}
+
+
+/*
+PROJECT SECTION
+*/
+img{
+    width: 6rem;
+
+}
+.gallery{
+    width: 600px;
+    display: flex;
+    overflow-x:scroll ;
+}
+.gallery div{
+    width: 90%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+}
+.gallery div img{
+    width: 100%;
+    filter: grayscale(100%);
+    transition: transform 0.5s ease ;
+}
+.gallery::-webkit-scrollbar{
+    display: none;
+}
+.gallery-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10% auto;
+}
+.backBtn, .nextBtn{
+    width: 50px;
+    cursor:pointer;
+    margin: 40px;
+    
+    
+}
+.gallery div img:hover{
+    filter: grayscale(0);
+    transform: scale(1.5,1.5);
+    cursor: pointer;
+
+}
+
+
+
+
+  
+ 
+  /*
+  EDUCATION SECTION
+  */
+  #Education{
+   width: 100%;
+   height: 100vh;
+   background: linear-gradient(137deg,violet,blue,red,green);
+  
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   font-style: italic;
+   color: #fff;
+   border-radius: 40%;
+   padding-top: 6rem;
+  
+  }
+  #Education li{
+    list-style: none;
+  }
+  #Education:hover{
+    background-color: cyan;
+  }
+
+
+  /*
+  CONTACT SECTION
+  
+ 
+  #contact{
+    width: 100%;
+    height: 100vh;
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+  }
+    */
+  .form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+
+  }
+  form{
+    background: linear-gradient(137deg,#7b2ed9, #2ed9d9);
+    display: flex;
+    flex-direction: column;
+    padding: 6vh 6vh;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+
+  }
+  form h3{
+    color: #0cf2e3;
+    font-weight: 800;
+    margin-bottom: 20px;
+  }
+  form input, form textarea{
+    border: 0px;
+    margin: 10px 0;
+    padding: 10px;
+    outline: 1px solid cyan;
+    cursor: pointer;
+    caret-color: cyan;
+    
+  }
+  form input:hover, form  textarea:hover{
+    transform: scale(1.3);
+    animation-duration: 1.6s ease;
+  }
+  form button{
+    padding: 14px;
+    width: 120px;
+    margin: auto ;
+    color: #0cf2e3;
+    font-size: 18px;
+    border: none;
+    border-radius: 20%;
+    cursor: pointer;
+  }
+  form button:hover{
+    background:violet;
+  }
+  
+  h5{
+    text-align: center;
+    margin-top: 37px;
+  }
+ 
