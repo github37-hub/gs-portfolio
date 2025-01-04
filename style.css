@@ -29,6 +29,7 @@ html{
    min-height: 100vh;
    padding: 0px 8%;
    overflow: hidden;
+   background: url("header-background.jpg");
    
 }
 
@@ -80,7 +81,7 @@ nav{
     align-items: center;
     position: fixed;
     padding: 10px 0px;
-    background: #fff rgba(255, 255, 255, 0.75);
+    background:  rgba(198, 250, 202, 0.75);
     backdrop-filter: blur(10px);
     width: 90%;
     height: 6rem;
@@ -140,20 +141,34 @@ aside:hover{
 }
 
 
+.header img{
+  width: 300px;
+  height: 260px;
+  margin-right: 40px;
+  border-radius: 6%;
+}
+#toggle-btn{
+  background:none;
+  font-size: 37px;
+  border:none;
+  
+}
+#toggle-btn:hover{
+  transform: scale(1.3);
+  animation-duration: 1.6s ease;
+}
+
+
  
   
 
 .image-box img{
     position: absolute;
-    right: 10%;
-    bottom: 50%;
+    right: 8%;
+    bottom: 30%;
     animation: scale 1s linear infinite alternate-reverse;
 }
-.header img{
-  width: 160px;
-  height: 160px;
-  
-}
+
 
 @keyframes scale {
     100%{transform: scale(0.5,0.5);}
@@ -164,12 +179,10 @@ aside:hover{
 /*
 PROJECT SECTION
 */
-img{
-    width: 6rem;
 
-}
 .gallery{
     width: 600px;
+    height: 600px;
     display: flex;
     overflow-x:scroll ;
 }
@@ -193,7 +206,9 @@ img{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 10% auto;
+    
+    padding-top: 200px;
+    background: linear-gradient(137deg,red,white,blue);
 }
 .backBtn, .nextBtn{
     width: 50px;
@@ -227,15 +242,39 @@ img{
    align-items: center;
    font-style: italic;
    color: #fff;
-   border-radius: 40%;
+   
    padding-top: 6rem;
+   
   
   }
-  #Education li{
+  #Education  ul{
     list-style: none;
+    }
+  #Education li a{
+    color:cyan;
+    
   }
-  #Education:hover{
-    background-color: cyan;
+  #Education ul li a:hover{
+    color: #b72ed9;
+    
+  }
+  #education-certificate img{
+    
+    width: 300px;
+    margin: 40px 20px;
+    
+  }
+  #education-certificate img:hover{
+    transform: scale(2);
+    animation-duration: 1.6s ease;
+  }
+  #education-certificate h3{
+    text-align: center;
+    background-color:cyan;
+  }
+  #education-certificate h3:hover{
+    transform: scale(1.3);
+    animation-duration: 1.6s ease;
   }
 
 
@@ -257,6 +296,7 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 120px;
    
 
   }
